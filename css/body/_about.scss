@@ -1,0 +1,98 @@
+.section-about{
+    min-height: 100rem;
+    background-color: $color_white-blue;
+    padding: 10rem 5%;
+    margin-top: 3rem;
+    border-bottom: 8rem solid transparent ;
+    border-radius: 5px;
+
+    &-textCol {
+        width: 50%;
+        margin-left: 10vw;
+    }
+
+    &-imagesCol {
+        position: relative;
+        width: 50%;
+        margin-left: 10vw;
+    }
+  
+}
+
+
+//2 colums in about section with grid display
+.grid-about{
+    height: fit-content;
+    min-height: 40vh; //Με αυτό το τρόπο δεν θα κάνουν overflow οι εικόνες απο το section background
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2rem;
+}
+
+
+
+.header-secondary {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    
+
+    //Εφέ για το χρώμα των γραμμάτων
+    background-image: url(../../images/gray-marble.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewX(8deg) skewY(1.5deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color_black, 0.4);
+    }
+}
+
+
+
+.header-tertiary {
+    font-size: $default_font-size;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.paragraph {
+
+    font-size: $default_font-size;
+
+    //Με αυτο τον τρόπο μπορώ να δώσω το όρισμα μονο στο Learn more
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+.learn-more{
+    &:link,
+    &:visited {
+        font-size: $default_font-size;
+        color: $color_gray-dark;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color_gray-dark;
+        padding: 3px;
+    }
+
+    &:hover {
+        background-image: url(../../images/gray-marble.jpg);
+        color: $color_white;
+        box-shadow: 0 1rem 2rem (rgba($color_black, 0.4));
+        transform: translateY(-5px);
+    }
+
+    &:active {
+        box-shadow: 0 0.5rem 1rem (rgba($color_black, 0.4));
+        transform: translateY(-3px);
+    }
+
+}
+
+
+

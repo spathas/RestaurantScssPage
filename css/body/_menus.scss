@@ -1,0 +1,123 @@
+.menu {
+    width: 100%;
+    min-height: 70rem;
+    margin-top: -12rem;
+    background-image: url(../../images/kitchen-731351_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    //Είναι το parent div της κάθε κάρτας.
+    &-card {
+        position: relative;
+        display: inline-block;
+        margin: 10vh auto;
+        width: 20%;
+        max-width: 35rem;
+        font-size: 2rem;
+
+        & > div {
+        //Εφέ για το αναποδογύρισμα της κάρτας. (Για όλα τα div μέσα στο menu-side)
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        transition: all 0.8s;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15rem;
+        }
+
+        //Σχεδίαση ανα πλευρά κάρτας
+        &-side {
+            position: absolute;
+            height: 50rem;
+            width: 100%;
+            //Για να μην φαίνεται το πίσω μερός συνέχεια.
+            backface-visibility: hidden;
+            box-shadow: 0 1rem 2rem rgba($color_black, 0.6);
+            border-radius: 5px;
+            
+            //Μπροστινή πλευρά κάρτας
+            &-front {
+                background-image: url(../../images/white-marble.jpg);
+
+                h1{
+                    padding:2rem 5rem;
+                    color: black;
+                }
+
+                ul{
+                    font-size: 1.6rem;
+                    padding:0rem 4rem;
+                }
+
+                li:not(:last-child) {
+                    margin-bottom: 1rem;
+                    border-bottom: 1px solid black;
+                }
+
+            }
+
+            //Πίσω πλευρά κάρτας
+            &-back {
+                background-image: url(../../images/gray-marble.jpg);
+                color: $color_white;
+                //Αρχική θέση κάρτας ανάποδα
+                transform: rotateY(180deg);
+                background-size: cover;
+
+                &>div {
+                    margin-top: 10rem;
+                }
+
+                &-price {
+                    font-size: 7rem;
+                    color: $color_white;
+                }
+
+                &-button {
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    background-color: $color_white;
+                    color: black;
+                    
+
+                    &:link,
+                    &:visited {
+                        position: absolute;
+                        @include center_position;
+                        margin-top: 4rem;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        padding: 1.5rem 4rem;
+                        display: inline-block;
+                        border-radius: 3.5rem;
+                    
+                        &:hover {
+                            transform: translate(-9.8rem, -4.5rem);
+                            box-shadow: 0 1rem 2rem rgba($color_black, 0.3);
+                        }
+                    
+                        &:active {
+                            transform: translate(-9.8rem, -4.3rem);
+                            box-shadow: 0 0.5rem 2rem rgba($color_black, 0.3);
+                        }
+                    
+                    }
+                     
+                }
+
+            }
+
+        }
+
+        //Εναλλαγή πλευράς κάρτας
+        &:hover &-side-front{
+            transform: rotateY(180deg);
+        }
+        &:hover &-side-back{
+            transform: rotateY(0deg);
+        }
+        
+    }
+}
+

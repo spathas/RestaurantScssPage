@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,300,400,700,900">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Restaurant example</title>
+
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #585858;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <header id="header" class="header">
+
+        <div class="video-header">
+            <video autoplay muted>
+                <source src="videos/Header.mp4" type="video/mp4">
+            Your browser is not supported.
+            </video>
+        </div>
+        <div class="logo-box">
+            <img src="images/Logo.png" alt="Restaurant" class="logo">
+        </div>
+
+        <div class="heading-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Restaurant example</span>
+                <span class="heading-primary-sub">where tradition meets modern cuisine</span>
+            </h1>
+        </div>
+
+        <!-- Αντί για button tag το έκανα anchor για να μπορώ να το διαχειριστώ καλύτερα από την css -->
+        <a href="#register" class="button button-header">Take a tour  ⮯</a>
+
+    </header>
+
+    <main>
+
+         <!-- ABOUT US -->
+        <section class="section-about utility-margin-top-Small" id="about-us">
+            <!-- Εδώ έχω φτιάξει ένα utilities class που το μονό που κάνει είναι να βάζει το κείμενη στην μέση
+              πολλές τεχνικές προκύπτουν επειδή κάνω χρήση του sass framework -->
+
+            <div class="section-about-header utility-center-text utility-margin-bottom">
+                    <h2 class="header-secondary utility-margin-bottom-Medium ">
+                        a delicious experience that will impress you
+                    </h2>
+            </div>
+
+            <div class="grid-about">
+
+                <div class="section-about-textCol">
+                    <h3 class="header-tertiary">
+                        HEADER
+                    </h3>
+                        
+                    <p class="paragraph">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus et accusamus consequuntur quis placeat, fugit ipsam qui magni,
+                        asperiores aliquid consequatur itaque obcaecati est sit nihil cum eos aut harum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam impedit explicabo nemo quibusdam nisi odio iure fugit velit veritatis harum consequatur earum, cupiditate sunt omnis dicta accusantium inventore autem! 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eaque corporis soluta, neque porro molestiae omnis odio reprehenderit quaerat maxime libero unde vel iure rem mollitia quis dolore. Fugiat, molestias?
+
+                    </p>
+
+                    <a href="#" class="learn-more" >Learn more &rarr;</a>
+                </div>
+                
+                <div class="section-about-imagesCol utility-center-text">
+                    <img src="images/about-image1.jpg" alt="aboutImage1" class="about-image about-image-1">
+                    <img src="images/about-image2.jpg" alt="aboutImage2" class="about-image about-image-2">
+                    <img src="images/about-image3.jpg" alt="aboutImage3" class="about-image about-image-3">
+                </div> 
+                
+            </div>
+
+              
+        </section>
+
+        <!-- MENUS - custom grid display -->
+        <section class="section-menus utility-center-text" id="menus">
+
+            <!-- 3 max div unless copy paste section-->
+                <div class="menu">
+                    
+                    <div class="menu-card">
+
+                        <div class="menu-card-side menu-card-side-front">
+                            <div class="menu-card-side-front-content">
+                                <h1>MENU 1</h1>
+                                <ul style="list-style: none;">
+                                    <li>Τυροπιτάκια – Σπανακοπιτάκια με dip γιαουρτιού</li>
+                                    <li>Χοιρινό ρολό γεμιστό με πιπεριες και γραβιερα με πατάτες baby και demi glace</li>
+                                    <li>Μπακλαβάς παραδοσιακός με παγωτό βανίλιας</li>
+                                    <li>Εμφιαλωμένο νερό – καφές φίλτρου ½ φιάλη κρασί λευκό ή κόκκινο ή 1 μπύρα</li>     
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card-side menu-card-side-back">
+                            <div class="menu-card-side-back-price">
+                                39&euro;
+                            </div>
+
+                            <a href="#popup" class="menu-card-side-back-button">Book</a>
+                        </div>
+
+                    </div>  
+
+                    <div class="menu-card">
+
+                        <div class="menu-card-side menu-card-side-front">
+                            <div class="menu-card-side-front-content">
+                                <h1>MENU 2</h1>
+                                <ul style="list-style: none;">
+                                    <li>Σαλάτα ανάμεικτη εποχής με τοματίνια και βινεγκρέτ βαλσάμικο</li>
+                                    <li>Μοσχαράκι γάλακτος στιφάδο κοκκινιστό</li>
+                                    <li>Εκμέκ με παγωτό καϊμάκι και σάλτσα αγριοβύσσινο Εμφιαλωμένο νερό – καφές φίλτρου 
+                                        ½ φιάλη κρασί λευκό ή κόκκινο ή μπύρα</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card-side menu-card-side-back">
+                            <div class="menu-card-side-back-price">
+                                42&euro;
+                            </div>
+                            
+                            <a href="#popup" class="menu-card-side-back-button">Book</a>
+                        </div>
+
+                    </div>
+
+                    <div class="menu-card">
+
+                        <div class="menu-card-side menu-card-side-front">
+                            <div class="menu-card-side-front-content">
+                                <h1>MENU 3</h1>
+                                <ul style="list-style: none;">
+                                    <li>Παραδοσιακή ελληνική σαλάτα με κριθαρομπουκιές,
+                                        τομάτα, κάπαρη, φέτα, κρεμμύδι, πιπεριά, ελιές και ελαιόλαδο</li>
+                                    <li>Αρνάκι λεμονάτο με baby πατάτες και λάδι άνηθου</li>
+                                    <li>Γαλακτομπούρεκο σε σάλτσα βανίλιας</li>
+                                    <li>Εμφιαλωμένο νερό – καφές φίλτρου
+                                        ½ φιάλη κρασί λευκό ή κόκκινο ή 1 μπύρα</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu-card-side menu-card-side-back">
+                            <div class="menu-card-side-back-price">
+                                47&euro;
+                            </div>
+                            
+                            <a href="#popup" class="menu-card-side-back-button">Book</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+               
+        </section>
+
+        <!-- Comments -->
+        <section class="section-comments" id="comments">
+
+            
+            <div class="story utility-margin-bottom-Small">
+
+                <figure class="story-shape">
+                    <img src="./images/comments/attractive-1869761_640.jpg" alt="comment-img" class="story-img">
+                </figure>
+                <figcaption class="story-caption">
+                    Mary Smith
+                </figcaption>
+
+                <div class="story-text">
+                    <h3 class="heading-tertiary utility-margin-bottom-Small">this is a heading</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi rem quo minima impedit, id accusantium laboriosam iste, repudiandae, illum eos eum 
+                        facere! Quibusdam, deleniti ipsam! Consectetur possimus quia natus quisquam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque id doloremque doloribus
+                        , ad illo commodi libero eligendi quod. Quasi deserunt iusto fuga voluptatem debitis exercitationem reiciendis recusandae dolores accusamus enim!
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="story utility-margin-bottom-Small">
+
+                <figure class="story-shape">
+                    <img src="./images/comments/man-945482_640.jpg" alt="comment-img" class="story-img">
+                </figure>
+                <figcaption class="story-caption">
+                    John Smith
+                </figcaption>
+
+                <div class="story-text">
+                    <h3 class="heading-tertiary utility-margin-bottom-Small">this is a heading</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi rem quo minima impedit, id accusantium laboriosam iste, repudiandae, illum eos eum 
+                        facere! Quibusdam, deleniti ipsam! Consectetur possimus quia natus quisquam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque id doloremque doloribus
+                        , ad illo commodi libero eligendi quod. Quasi deserunt iusto fuga voluptatem debitis exercitationem reiciendis recusandae dolores accusamus enim!
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="story utility-margin-bottom-Small ">
+
+                <figure class="story-shape">
+                    <img src="./images/comments/girl-919048_640.jpg" alt="comment-img" class="story-img">
+                </figure>
+                <figcaption class="story-caption">
+                    Elsa Malcov
+                </figcaption>
+
+                <div class="story-text">
+                    <h3 class="heading-tertiary utility-margin-bottom-Small">this is a heading</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi rem quo minima impedit, id accusantium laboriosam iste, repudiandae, illum eos eum 
+                        facere! Quibusdam, deleniti ipsam! Consectetur possimus quia natus quisquam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque id doloremque doloribus
+                        , ad illo commodi libero eligendi quod. Quasi deserunt iusto fuga voluptatem debitis exercitationem reiciendis recusandae dolores accusamus enim!
+                    </p>
+                </div>
+                
+            </div>
+
+            
+
+        </section>
+
+        <!-- PHOTO GALLERY - flex box-->
+        <section class="section-gallery" id="gallery">
+
+            <div class="gallery">
+                <div class="photo"><img src="./images/gallery/annie-spratt-oT7_v-I0hHg-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/chuttersnap-DOBIZ_sqgXM-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/jason-leung-poI7DelFiVA-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/jay-wennington-N_Y88TWmGwA-unsplash (1).jpg" /></div>
+                <div class="photo"><img src="./images/gallery/kenny-luo-7IiPopynx18-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/michael-browning-MtqG1lWcUw0-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/nils-stahl-BCkLxilDvJU-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg" /></div>
+                <div class="photo"><img src="./images/gallery/scott-warman-rrYF1RfotSM-unsplash.jpg" /></div>
+            </div>
+
+            <div class="loading">
+                    <div class="loading-animation">
+                        <div></div>
+                        <div></div>
+                        
+                    </div>
+
+                    <span>Please wait for the images to load.</span>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <h1 class="footer-logo-box utility-margin-bottom-Small"><a href="#" class="footer-logo-text"><b>Example Restaurant</b></a></h1>
+        </div>
+        <div class="footer-navigation">
+            <ul style="list-style: none">
+                <li class="footer-navigation-item"><a href="#" class="footer-navigation-link">Main</a></li>
+                <li class="footer-navigation-item"><a href="#about-us" class="footer-navigation-link">About Us</a></li>
+                <li class="footer-navigation-item"><a href="#menus" class="footer-navigation-link">Menus</a></li>
+                <li class="footer-navigation-item"><a href="#comments" class="footer-navigation-link">Comments</a></li>
+                <li class="footer-navigation-item"><a href="#gallery" class="footer-navigation-link">Gallery</a></li>
+                <li class="footer-navigation-item"><a href="#register" class="footer-navigation-link">Register</a></li>
+            </ul>
+        </div>
+        <div class="footer-details">
+            <table style="width:100%">
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Email</th>
+                    <th class="footer-details-col">service@exrestaurant.info</th>
+                    <th class="footer-details-col">Monday</th>
+                    <th class="footer-details-col">12:00 - 22:00</th>
+                </tr>
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Address</th>
+                    <th class="footer-details-col">123 Fake Street</th>
+                    <th class="footer-details-col">Tuesday</th>
+                    <th class="footer-details-col">12:00 - 22:00</th>
+                </tr>
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Phone</th>
+                    <th class="footer-details-col">fdggfd</th>
+                    <th class="footer-details-col">Wednesday</th>
+                    <th class="footer-details-col">12:00 - 22:00</th>
+                </tr
+                ><tr class="footer-details-row">
+                    <th class="footer-details-col">Facebook</th>
+                    <th class="footer-details-col">exampleRestaurant@facebook.com</th>
+                    <th class="footer-details-col">Thursday</th>
+                    <th class="footer-details-col">12:00 - 22:0</th>
+                </tr>
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Instagram</th>
+                    <th class="footer-details-col">exampleRestaurant@instagram.com</th>
+                    <th class="footer-details-col">Friday</th>
+                    <th class="footer-details-col">12:00 - 22:00</th>
+                </tr>
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Twitter</th>
+                    <th class="footer-details-col">exampleRestaurant@twitter.com</th>
+                    <th class="footer-details-col">Saturday</th>
+                    <th class="footer-details-col">14:00 - 1:00</th>
+                </tr>
+                <tr class="footer-details-row">
+                    <th class="footer-details-col">Reservation</th>
+                    <th class="footer-details-col"><a href="#popup" class="footer-navigation-link">Click here</a></th>
+                    <th class="footer-details-col">Sunday</th>
+                    <th class="footer-details-col">10:00 - 20:00</th>
+                </tr>
+                
+              </table>
+            </div>
+    </footer>
+
+    <div class="popup" id="popup">
+
+        <div class="popup-content">
+            <div class="front">
+                <a href="#header" class="popup-close">&times;</a>
+                <div class="booking-form">
+                    <form action="#header" class="form">
+                        
+
+                        <h3 class="heading-tertiary utility-margin-bottom-Small">this is a heading</h3>
+
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" placeholder="Email Address" required>
+                            <label for="Email" class="form-label">Enter your email.</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-input" id="name" placeholder="Password" required>
+                            <label for="Password" class="form-label">Enter your password.</label>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="form-button">Log in</button>
+                            <a href="#register" class="form-button form-anchor">Register</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="register" id="register">
+
+        <div class="register-content">
+            <div class="front">
+                <a href="#header" class="register-close">&times;</a>
+                <div class="booking-form">
+                    <form action="#header" class="form">
+                        
+
+                        <h3 class="heading-tertiary utility-margin-bottom-Small">Registeration</h3>
+
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="name" placeholder="Full name" required>
+                            <label for="name" class="form-label">Enter your full name.</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" placeholder="Email Address" required>
+                            <label for="Email" class="form-label">Enter your email.</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" id="password" placeholder="Password" required>
+                            <label for="Password" class="form-label">Enter your password.</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" id="password2" placeholder="Confirm-Password" required>
+                            <label for="Password2" class="form-label">Confirm your password</label>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="form-button">Confirm</button>
+                            <a href="#popup" class="form-button form-anchor">Log in</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./javascript/script.js"></script>
+
+
+</body>
+
+
+</html>

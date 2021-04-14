@@ -1,0 +1,36 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    //box-sizing: border-box; Είναι μια πρακτική για να κληρωνόσουν όλα τα αντικείμενα μέσα στην σελίδα το border-box.
+    box-sizing: inherit;
+}
+
+html {
+    //Αυτή είναι κλασική τεχνική για να μπορούμε να διαχειριζόμαστε την σελίδα με ευκολία.
+    //font-size: 10px; Τα 10px είναι μια πολύ βολική αναφορά για τα rem μου.
+    font-size: 62.5%; //62.5 διότι το deafault είναι 16px * 62,5% = 10px.
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    //font-size: 16px;
+    //font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color_black;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.3rem;
+}
+

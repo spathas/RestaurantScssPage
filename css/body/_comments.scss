@@ -1,0 +1,61 @@
+.section-comments {
+    background-color: $color_white-blue;
+    padding: 10rem 25%;
+    display: block;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.story {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 3rem 6rem rgba($color_black, 0.1);
+    padding: 2rem 5rem;
+    background-color: $color_white;
+    border-radius: 2rem;
+    position: relative;
+    display: inline-block; 
+    
+
+    &-shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        transform: translateX(-2rem);
+        //Φτίαχνει το σχήμα της είκονας στρογγυλό
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+    }
+
+    &-caption {
+        position: absolute;
+        top: 40%;
+        left: 7.5%;
+        color: $color_white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.5rem;
+        opacity: 0;
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &:hover &-caption {
+        opacity: 1;
+    }
+
+    &-img {
+        height: 100%;
+        transition: all .5s;
+    }
+
+    &:hover &-img {
+        filter: blur(3px);
+        transform: scale(1.4);
+    }
+}
+
+

@@ -1,0 +1,89 @@
+.footer {
+background-color: $color_white_blue;
+background-size: contain;
+padding: 3rem 2rem;
+font-size: 1.4;
+text-align: center;
+min-height: 50rem;
+
+    &-logo{
+        border-top: 2px solid black;
+        width: 100%;
+
+        &-text{
+            width: 100%;
+            font-family: 'Dancing Script', cursive;
+            color: $color_black;
+            text-decoration: none;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            &:hover {
+                text-shadow: .5rem 1rem 2rem rgba($color_black, 0.4);
+            }
+            &:active {
+                text-shadow: 0 0.5rem 1rem rgba($color_black, 0.4);
+            }
+            
+        }
+    }
+
+    &-navigation {
+        width: 45%;
+        display: block;
+        margin-top: 4rem;
+        display: inline-block;
+
+            &-item{
+                display: inline-block;
+                margin-right: 1rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $color_black;
+                }
+
+                &:hover,
+                &:active {
+                    background-color: $color_gray_medium;
+                    border-radius: 100px;
+                    border: none;
+                }
+
+                &-social  {
+                    padding-left: 2rem;
+                }
+
+            }
+
+            &-link{
+                font-size: 1.7rem;
+                color: $color_black;
+                text-decoration: none;
+            }
+
+            //Κάνει τα link άσπρα όταν κάνω hover/active το item
+            &-item:hover &-link{
+                color: white;
+            }
+            &-item:active &-link{
+                color: white;
+            }
+    }
+
+    &-details {
+        width: 45%;
+        height: 100px;
+        display: inline-block;
+        text-align: left;
+
+        &-col {
+            padding-top: 1rem;
+            font-size: 1.7rem;
+            font-weight: 300;
+        }
+    }
+
+    
+}
